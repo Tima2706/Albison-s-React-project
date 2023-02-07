@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin-bottom: 0;
+}
+.navbar {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  padding: 25px 0;
+  &-button {
+    button {
+      transition: 0.5s;
+      border: none;
+      background-color: transparent;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      padding: 5px 10px;
+      border-radius: 12px;
+    }
+  }
+  &-ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+      img {
+        background-color: transparent;
+      }
+      a {
+        font-weight: bold;
+        transition: 0.5s;
+      }
+    }
+  }
+  &-paragraph {
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 12px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  &-counter {
+    font-size: 10px;
+    position: absolute;
+    background-color: red;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    top: 15px;
+  }
+}
+
+.light {
+  background-color: #fff;
+  a {
+    color: black;
+  }
+}
+.dark {
+  background-color: #20293d;
+  color: white;
+  a {
+    color: #fff;
+  }
+  .navbar-mode {
+    background-color: #fff !important;
+  }
+  .navbar-paragraph {
+    background-color: #fff !important;
+    i {
+      color: #20293d;
+      transition: 0.5s;
+    }
+  }
+  .posts-item {
+    background-color: #fff;
+    color: black;
+  }
+}

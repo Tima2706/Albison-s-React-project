@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
+import Layout from './Components/Layout/Layout'
+import HomeApp from './pages/home';
+import AboutApp from './pages/about/AboutApp';
+import PostsApp from './pages/posts/PostsApp';
+import Comments from './pages/detail-comments/Comments';
 
 function App() {
+  const [theme, setTheme] = useState('light')
+  const [cart, setCart] = useState([])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Layout
+        setCart={setCart}
+        mode={theme}
+        theme={setTheme}
+        cart={cart}
+      >
+        <Routes>
+          <Route path="/" element={<HomeApp />}></Route>
+          <Route path="/PostsApp" element={<PostsApp />}></Route>
+          <Route path="/AboutApp" element={<AboutApp />}></Route>
+          <Route path={`/Comments/:id/comments`} element={<Comments />}></Route>
+        </Routes>
+      </Layout>
     </div>
   );
 }
